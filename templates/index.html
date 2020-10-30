@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>SVHN Model as a Flask API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1>Dangerous Object Detect System</h1>
+<div class="agile-its">
+    <h2>Deep Learning Result Web Service</h2>
+    <div class="w3layouts">
+        <div class="photos-upload-view">
+
+            <form id="upload" action="/predict" method="POST" enctype="multipart/form-data">
+                <div class="upload-btn-wrapper">
+                    <button class="btn">이미지 업로드</button>
+                    <input type="file" value="Upload" name="image" accept="image/*" onchange="setThumbnail(event);">
+
+
+                </div>
+                <div id="image_container">
+                        
+                    </div> 
+                    <script> 
+                    function setThumbnail(event) { 
+                        var reader = new FileReader(); 
+                        reader.onload = function(event) { 
+                            var img = document.createElement("img"); 
+                            img.setAttribute("src", event.target.result); 
+                            document.querySelector("div#image_container").appendChild(img); 
+                        }; 
+                    reader.readAsDataURL(event.target.files[0]); 
+                    } 
+                    </script>
+                    
+                <br><input type="submit" value="예측 결과">
+                {% if label %}
+                	<script type ="text/javascript">
+                		alert("탐지결과 : {{label}}");
+                		alert(fontcolor("red"));
+                	</script>
+                    <!-- <div class="result_lable" style="margin:auto;"> 
+                        {{ label }}
+                    </div> -->
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
