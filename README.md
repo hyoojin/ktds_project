@@ -13,10 +13,8 @@ Dangerous Object Detect System
 - 웹 기반 인공지능 보안검색 프로토타입 개발 등의 작업 수행
 
 세부사항
+
 [WEB] spring framework - oracle
-
 [딥러닝 결과 - WEB] flask
-
 [딥러닝] Tensorflow Keras 모델
-
 [Server] AWS EC2
