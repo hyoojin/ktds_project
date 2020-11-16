@@ -2,6 +2,7 @@
 [KTDS교육] 제 16기 자바와 파이썬을 이용한 데이터분석 전문가 양성과정
 
 프로젝트명
+
 Dangerous Object Detect System
 
 프로젝트 소개
@@ -15,6 +16,9 @@ Dangerous Object Detect System
 세부사항
 
 [WEB] spring framework - oracle
+
 [딥러닝 결과 - WEB] flask
+
 [딥러닝] Tensorflow Keras 모델
+
 [Server] AWS EC2
